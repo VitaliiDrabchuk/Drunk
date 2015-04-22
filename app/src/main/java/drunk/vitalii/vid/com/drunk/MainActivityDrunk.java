@@ -42,6 +42,7 @@ public class MainActivityDrunk extends ActionBarActivity {
         clickButton = (Button) this.findViewById(R.id.clickBtn);
         closeButton = (Button) this.findViewById(R.id.closeBtn);
         text = (TextView) this.findViewById(R.id.messageTxt);
+        text.setVisibility(View.GONE);
 
         applyListeners();
     }
