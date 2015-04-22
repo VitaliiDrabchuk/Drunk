@@ -1,5 +1,7 @@
 package drunk.vitalii.vid.com.drunk;
 
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,20 +12,38 @@ import android.widget.TextView;
 
 
 public class MainActivityDrunk extends ActionBarActivity {
+    private static final String VERSION = "version: ";
+
     private Button clickButton;
     private Button closeButton;
     private TextView text;
+    private TextView versionLabel;
     private boolean isTextVisible;
+    private PackageInfo packageInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity_drunk);
-        this.clickButton = (Button) this.findViewById(R.id.clickBtn);
-        this.closeButton = (Button) this.findViewById(R.id.closeBtn);
-        this.text = (TextView) this.findViewById(R.id.messageTxt);
 
-        this.applyListeners();
+        versionLabel = (TextView) this.findViewById(R.id.versionInfoLabel);
+        try {
+            packageInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        if (packageInfo != null) {
+            versionLabel.setText(VERSION + packageInfo.versionName);
+        } else {
+            versionLabel.setVisibility(View.GONE);
+        }
+
+        clickButton = (Button) this.findViewById(R.id.clickBtn);
+        closeButton = (Button) this.findViewById(R.id.closeBtn);
+        text = (TextView) this.findViewById(R.id.messageTxt);
+
+        applyListeners();
     }
 
     private void applyListeners() {
