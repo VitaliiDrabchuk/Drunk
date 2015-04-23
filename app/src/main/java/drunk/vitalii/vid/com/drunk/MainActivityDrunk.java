@@ -1,25 +1,24 @@
 package drunk.vitalii.vid.com.drunk;
 
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
+    import android.content.pm.PackageInfo;
+    import android.content.pm.PackageManager;
+    import android.support.v7.app.ActionBarActivity;
+    import android.os.Bundle;
+    import android.view.Menu;
+    import android.view.MenuItem;
+    import android.view.View;
+    import android.widget.Button;
+    import android.widget.TextView;
 
 
-public class MainActivityDrunk extends ActionBarActivity {
-    private static final String VERSION = "version: ";
+    public class MainActivityDrunk extends ActionBarActivity {
+        private static final String VERSION = "version: ";
 
-    private Button clickButton;
-    private Button closeButton;
-    private TextView text;
-    private TextView versionLabel;
-    private boolean isTextVisible;
-    private PackageInfo packageInfo;
+        private Button clickButton;
+        private TextView text;
+        private TextView versionLabel;
+        private boolean isTextVisible;
+        private PackageInfo packageInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +39,6 @@ public class MainActivityDrunk extends ActionBarActivity {
         }
 
         clickButton = (Button) this.findViewById(R.id.clickBtn);
-        closeButton = (Button) this.findViewById(R.id.closeBtn);
         text = (TextView) this.findViewById(R.id.messageTxt);
         text.setVisibility(View.GONE);
 
@@ -59,14 +57,6 @@ public class MainActivityDrunk extends ActionBarActivity {
                     textObj.setVisibility(View.VISIBLE);
                 }
                 isTextVisible = !isTextVisible;
-            }
-        });
-
-
-        this.closeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
             }
         });
     }
