@@ -1,24 +1,31 @@
-package drunk.vitalii.vid.com.drunk;
+package drunk.vitalii.vid.com.Activity;
 
-    import android.content.pm.PackageInfo;
-    import android.content.pm.PackageManager;
-    import android.support.v7.app.ActionBarActivity;
-    import android.os.Bundle;
-    import android.view.Menu;
-    import android.view.MenuItem;
-    import android.view.View;
-    import android.widget.Button;
-    import android.widget.TextView;
+import android.app.Activity;
+import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import drunk.vitalii.vid.com.R;
 
 
-    public class MainActivityDrunk extends ActionBarActivity {
-        private static final String VERSION = "version: ";
+public class MainActivityDrunk extends Activity {
+    public static final String SETUP_ACCOUNT = "drunk.vitalii.vid.com.Activity.SETUP_ACCOUNT";
 
-        private Button clickButton;
-        private TextView text;
-        private TextView versionLabel;
-        private boolean isTextVisible;
-        private PackageInfo packageInfo;
+    private static final String VERSION = "version: ";
+    private static boolean newAccount = true;
+
+    private Button clickButton;
+    private TextView text;
+    private TextView versionLabel;
+    private boolean isTextVisible;
+    private PackageInfo packageInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +49,7 @@ package drunk.vitalii.vid.com.drunk;
         text = (TextView) this.findViewById(R.id.messageTxt);
         text.setVisibility(View.GONE);
 
-        applyListeners();
+//        applyListeners();
     }
 
     private void applyListeners() {
@@ -51,14 +58,29 @@ package drunk.vitalii.vid.com.drunk;
         this.clickButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (isTextVisible) {
-                    textObj.setVisibility(View.GONE);
+
+                Log.i("RED_BUTTON", "is clicked");
+                if (newAccount) {
+                    Log.i("ACCOUNT", "is new");
+                    newAccount = false;
                 } else {
-                    textObj.setVisibility(View.VISIBLE);
+                    Log.i("ACCOUNT", "exists");
+                    if (isTextVisible) {
+                        textObj.setVisibility(View.GONE);
+                    } else {
+                        textObj.setVisibility(View.VISIBLE);
+                    }
+                    isTextVisible = !isTextVisible;
                 }
-                isTextVisible = !isTextVisible;
+
             }
         });
+    }
+
+    public void doEverythingFine(View view) {
+        Intent intent = new Intent(this, SetupContacts.class);
+        intent.putExtra(SETUP_ACCOUNT, true);
+        startActivity(intent);
     }
 
 

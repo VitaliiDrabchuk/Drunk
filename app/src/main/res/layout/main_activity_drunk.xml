@@ -17,7 +17,8 @@
         android:layout_centerHorizontal="true"
         android:fontFamily="sans-serif"
         android:textSize="30dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:onClick="doEverythingFine"/>
 
     <TextView android:text="@string/message_label"
         android:id="@+id/messageTxt"

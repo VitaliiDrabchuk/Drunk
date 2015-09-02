@@ -1,0 +1,13 @@
+=== D-001 - Contact-List
+
+AC:
+WHEN user click on RED_BUTTON first time
+THEN new Activity is displayed
+AND all contacts is displayed as checkbox list
+
+
+Tasks:
+0 - Change Activity after RED_BUTTON was clicked;
+1 - app have to be matched with contact list;
+2 - display all contact names on screen;
+3 - add checkboxes (selections) list for contacts;

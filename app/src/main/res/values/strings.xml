@@ -6,4 +6,7 @@
     <string name="click_button">Click Me!</string>
     <string name="close_button">Close</string>
     <string name="version_label">version: </string>
+    <string name="title_activity_setup_contacts">SetupContacts</string>
+
+    <string name="hello_world">Hello world!</string>
 </resources>
