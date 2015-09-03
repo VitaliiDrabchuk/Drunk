@@ -1,15 +1,15 @@
 package drunk.vitalii.vid.com.Activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 import drunk.vitalii.vid.com.R;
 
-public class SetupContacts extends AppCompatActivity {
+public class SetupContacts extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +24,7 @@ public class SetupContacts extends AppCompatActivity {
 
 
         TextView textView = (TextView)this.findViewById(R.id.newAccountMessage);
-        textView.setTextSize(40);
-        textView.setText("Is this new account - " + String.valueOf(newAccount));
+        textView.setText("U R Drunk body! - " + String.valueOf(newAccount));
 
 //        setContentView(textView);
 
