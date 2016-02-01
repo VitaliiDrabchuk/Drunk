@@ -1,5 +1,9 @@
 === D-001 - Contact-List
 
+(!)Ideas:
+[10:52:29] Vika Lapsar: http://www.mkyong.com/android/android-alert-dialog-example/
+[10:53:35] Vika Lapsar: SharedPreferences
+
 AC:
 WHEN user click on RED_BUTTON first time
 THEN new Activity is displayed
