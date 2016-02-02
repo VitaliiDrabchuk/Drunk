@@ -5,13 +5,15 @@
 [10:53:35] Vika Lapsar: SharedPreferences
 
 AC:
-WHEN user click on RED_BUTTON first time
+WHEN user click on THE_BUTTON first time
 THEN new Activity is displayed
 AND all contacts is displayed as checkbox list
 
 
 Tasks:
-0 - Change Activity after RED_BUTTON was clicked;
-1 - app have to be matched with contact list;
-2 - display all contact names on screen;
-3 - add checkboxes (selections) list for contacts;
+(#) - Change Activity after THE_BUTTON was clicked;
+(#) - app have to be matched with contact list;
+(#) - display all contact names on screen;
+
+Moved from another stage
+(~) - add checkboxes (selections) list for contacts;

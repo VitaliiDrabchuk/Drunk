@@ -1,12 +1,13 @@
 <resources>
     <string name="app_name">Drunk</string>
 
-    <string name="message_label">U R Drunk body!</string>
     <string name="action_settings">Settings</string>
     <string name="click_button">Click Me!</string>
+    <string name="message_label">Let\'s be drunk!</string>
     <string name="close_button">Close</string>
     <string name="version_label">version: </string>
-    <string name="title_activity_setup_contacts">SetupContacts</string>
 
-    <string name="test_greeting">Test greeting!</string>
+    <string name="title_activity_setup_contacts">SetupContacts</string>
+    <!--<string name="test_greeting">Test greeting!</string>-->
+    <string name="contact_caption">Contact list</string>
 </resources>
