@@ -1,0 +1,19 @@
+=== D-001 - Contact-List
+
+(!)Ideas:
+[10:52:29] Vika Lapsar: http://www.mkyong.com/android/android-alert-dialog-example/
+[10:53:35] Vika Lapsar: SharedPreferences
+
+AC:
+WHEN user click on THE_BUTTON first time
+THEN new Activity is displayed
+AND all contacts is displayed as checkbox list
+
+
+Tasks:
+(#) - Change Activity after THE_BUTTON was clicked;
+(#) - app have to be matched with contact list;
+(#) - display all contact names on screen;
+
+Moved from another stage
+(~) - add checkboxes (selections) list for contacts;
