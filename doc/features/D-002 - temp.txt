@@ -1,0 +1,21 @@
+=== D-002 - Checkboxes
+
+(!)Ideas:
+[10:52:29] Vika Lapsar: http://www.mkyong.com/android/android-alert-dialog-example/
+[10:53:35] Vika Lapsar: SharedPreferences
+Sort contact list by how often you use contact
+
+AC:
+----
+
+Tasks:
+(.) - Add sorting;
+(.) - Use own resource for contact List (not default);
+(#) - Use own icon; (https://icons8.com/web-app/category/android/Food)
+(#) - Add logging;
+(#) - Format code to new style;
+
+
+
+Moved from another stage
+(~) - add checkboxes (selections) list for contacts;

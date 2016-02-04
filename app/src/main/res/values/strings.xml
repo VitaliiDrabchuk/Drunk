@@ -6,6 +6,7 @@
     <string name="message_label">Let\'s be drunk!</string>
     <string name="close_button">Close</string>
     <string name="version_label">version: </string>
+    <string name="clicks">Click: </string>
 
     <string name="title_activity_setup_contacts">SetupContacts</string>
     <!--<string name="test_greeting">Test greeting!</string>-->
